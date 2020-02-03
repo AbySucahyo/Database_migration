@@ -13,4 +13,8 @@ class Anggota extends Model
     ];
 
     public $timestamps = false ;
+
+    public function Peminjaman(){
+        return this()->hasMany('App\Peminjaman','id');
+    }
 }

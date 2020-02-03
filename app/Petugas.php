@@ -9,4 +9,8 @@ class Petugas extends Model
     protected $table = "petugas" ;
     protected $primaryKey = "id" ;
     public $timestamps = false ;
+
+    public function Peminjaman(){
+        return this()->hasMany('App\Peminjaman','id');
+    }
 }

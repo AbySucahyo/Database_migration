@@ -35,3 +35,6 @@ Route::get('dataanggota', 'AnggotaController@show')->middleware('jwt.verify');
 Route::post('tambahanggota', 'AnggotaController@store')->middleware('jwt.verify');
 Route::put('ubahanggota/{id}', 'AnggotaController@update')->middleware('jwt.verify');
 Route::delete('hapusanggota/{id}', 'AnggotaController@destroy')->middleware('jwt.verify');
+
+Route::post('tambahpeminjaman', 'PeminjamanController@store')->middleware('jwt.verify');
+Route::get('tampilpinjam/{id}','PeminjamanController@show')->middleware('jwt.verify');

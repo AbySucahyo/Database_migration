@@ -13,4 +13,8 @@ class Buku extends Model
     ];
 
     public $timestamps = false ;
+
+    public function Detail(){
+        return this()->hasMany('App\Detail','id');
+}
 }
